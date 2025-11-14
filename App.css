@@ -1,0 +1,447 @@
+/* ---------------------- FULL SCREEN HOME BANNER (RIGHT CONTENT) ---------------------- */
+
+.home-banner {
+  width: 100%;
+  height: 100vh;                 
+  display: flex;
+  justify-content: flex-end;     
+  align-items: center;
+  padding-right: 80px;           
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* dark overlay for readability */
+.home-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      to left,
+      rgba(0, 40, 20, 0.75),
+      rgba(0, 40, 20, 0.25)
+  ); 
+  
+}
+
+.banner-content {
+  position: relative;
+  z-index: 10;
+  max-width: 500px;
+  text-align: right;            
+  color: white;
+}
+
+.banner-content h1 {
+  font-size: 55px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.15;
+}
+
+.banner-content p {
+  font-size: 22px;
+  font-weight: 300;
+  color: #d9f6ea;
+}
+
+
+
+/* ---------------------------------------------------
+    GLOBAL STARBUCKS 
+------------------------------------------------------ */
+:root {
+  --star-green: #006241;
+  --dark-green: #004030;
+  --mint-green: #e3f6ef;
+  --light-green: #edf9f4;
+  --white: #ffffff;
+  --soft-grey: #f2f2f2;
+  --text-dark: #1a1a1a;
+  --green-shadow: rgba(0, 98, 65, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background-color: var(--light-green);
+  color: var(--text-dark);
+}
+
+/* ---------------------------------------------------
+    HEADER 
+------------------------------------------------------ */
+.header {
+  width: 100%;
+  height: 75px;
+  background: var(--star-green);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 45px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 12px var(--green-shadow);
+}
+
+.header h2 {
+  font-size: 23px;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.header nav {
+  display: flex;
+  gap: 30px;
+}
+
+.header nav a {
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 600;
+  padding-bottom: 3px;
+  transition: 0.3s;
+}
+
+.header nav a:hover {
+  color: var(--mint-green);
+  border-bottom: 2px solid var(--mint-green);
+}
+
+/* ---------------------------------------------------
+   HOME PAGE 
+------------------------------------------------------ */
+.home {
+  padding: 90px 20px;
+  text-align: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--star-green), var(--dark-green));
+  border-bottom: 4px solid var(--star-green);
+}
+
+.home h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.home p {
+  font-size: 20px;
+  color: var(--mint-green);
+}
+
+/* ---------------------------------------------------
+ MENU PAGE 
+------------------------------------------------------ */
+.menu-highlights {
+  padding: 60px 20px;
+  background: var(--mint-green);
+}
+
+.menu-highlights h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--star-green);
+}
+
+.menu-items {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+/* Green menu cards */
+.menu-item {
+  width: 270px;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 8px 18px var(--green-shadow);
+  border-left: 6px solid var(--star-green);
+  transition: 0.35s;
+}
+
+.menu-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 98, 65, 0.35);
+}
+
+.menu-item img {
+  width: 140px;
+  height: 140px;
+  border-radius: 15px;
+  background: var(--light-green);
+  padding: 10px;
+}
+
+.menu-item h3 a {
+  text-decoration: none;
+  color: var(--star-green);
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.menu-item h3 a:hover {
+  color: var(--dark-green);
+}
+
+.menu-item p {
+  color: var(--text-dark);
+  margin-top: 8px;
+}
+
+/* ---------------------------------------------------
+   COFFEE DETAILS
+------------------------------------------------------ */
+.coffee-details {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--light-green);
+}
+
+.coffee-details img {
+  width: 250px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px var(--green-shadow);
+  background: var(--mint-green);
+  padding: 15px;
+}
+
+.coffee-details h2 {
+  margin-top: 20px;
+  font-size: 32px;
+  color: var(--star-green);
+}
+
+.coffee-details p {
+  margin: 15px auto;
+  width: 55%;
+  font-size: 18px;
+}
+
+.coffee-details button {
+  padding: 12px 30px;
+  background: var(--star-green);
+  color: var(--white);
+  border: none;
+  border-radius: 30px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.coffee-details button:hover {
+  background: var(--dark-green);
+}
+
+/* ---------------------------------------------------
+    ABOUT PAGE 
+------------------------------------------------------ */
+.about {
+  padding: 60px 20px;
+  text-align: center;
+  background: var(--mint-green);
+}
+
+.about h2 {
+  font-size: 32px;
+  color: var(--star-green);
+}
+
+.about p {
+  font-size: 18px;
+  margin-top: 12px;
+}
+
+/* ---------------------------------------------------
+  CONTACT PAGE — GREEN FOOTER
+------------------------------------------------------ */
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--star-green);
+  color: var(--white);
+  border-top: 4px solid var(--dark-green);
+}
+
+.contact h2 {
+  font-size: 32px;
+}
+
+.contact p {
+  font-size: 18px;
+  margin-top: 5px;
+  opacity: 0.9;
+}
+
+/* ---------------------------------------------------
+    LOGIN PAGE — GREEN SHADOW CARD
+------------------------------------------------------ */
+form {
+  background: var(--white);
+  padding: 35px;
+  width: 320px;
+  margin-top: 70px;
+  border-radius: 15px;
+  box-shadow: 0 8px 22px var(--green-shadow);
+}
+
+form h2 {
+  color: var(--star-green);
+  margin-bottom: 15px;
+}
+
+form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid var(--star-green);
+  font-size: 15px;
+}
+
+form input:focus {
+  outline: none;
+  border-color: var(--dark-green);
+}
+
+form button {
+  padding: 12px;
+  background: var(--star-green);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+form button:hover {
+  background: var(--dark-green);
+}
+/* ---------------------------------------------------
+    MOBILE RESPONSIVE VERSION
+------------------------------------------------------ */
+
+/* Tablets & Mobile (≤ 768px) */
+@media (max-width: 768px) {
+
+  /* Home Banner */
+  .home-banner {
+    padding-right: 30px;
+    height: 80vh;
+    justify-content: center;      
+    text-align: center;
+  }
+
+  .banner-content {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .banner-content h1 {
+    font-size: 38px;
+  }
+
+  .banner-content p {
+    font-size: 18px;
+  }
+
+  /* Header */
+  .header {
+    padding: 0 20px;
+    height: 65px;
+  }
+
+  .header nav {
+    gap: 18px;
+  }
+
+  .header nav a {
+    font-size: 14px;
+  }
+
+  /* Menu Items */
+  .menu-items {
+    gap: 20px;
+  }
+
+  .menu-item {
+    width: 85%;
+  }
+
+  /* Coffee Details */
+  .coffee-details p {
+    width: 90%;
+  }
+
+  /* Forms */
+  form {
+    width: 90%;
+    padding: 25px;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+
+  /* Banner */
+  .banner-content h1 {
+    font-size: 30px;
+  }
+
+  .banner-content p {
+    font-size: 16px;
+  }
+
+  .home-banner {
+    height: 70vh;
+    padding-right: 0;
+  }
+
+  /* Header */
+  .header nav {
+    gap: 12px;
+  }
+
+  .header nav a {
+    font-size: 13px;
+  }
+
+  .header h2 {
+    font-size: 18px;
+  }
+
+  /* Menu Cards */
+  .menu-item {
+    width: 95%;
+    padding: 18px;
+  }
+
+  .menu-item img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Coffee details */
+  .coffee-details img {
+    width: 180px;
+  }
+
+  .coffee-details h2 {
+    font-size: 26px;
+  }
+}
